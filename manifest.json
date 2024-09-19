@@ -1,0 +1,22 @@
+{
+    "short_name": "PastelJump",
+    "name": "Pastel Jumping Game",
+    "description": "A fun pastel-themed jumping game.",
+    "icons": [
+      {
+        "src": "images/icons/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "images/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#a1887f"
+  }
+  

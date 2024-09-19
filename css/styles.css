@@ -1,0 +1,74 @@
+/* css/styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff; /* Changed to White */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #a1887f; /* Pastel Brown */
+}
+.character {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: #ffccbc; /* Pastel Orange */
+    border-radius: 10%;
+    transition: bottom 0.3s;
+}
+.character.jumping {
+    animation: jump 0.6s forwards;
+}
+@keyframes jump {
+    0% { bottom: 15%; }
+    50% { bottom: 45%; }
+    100% { bottom: 15%; }
+}
+.obstacle {
+    position: absolute;
+    bottom: 15%;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: #c5e1a5; /* Pastel Green */
+    border-radius: 10%;
+    animation: moveObstacle 2s linear forwards;
+}
+@keyframes moveObstacle {
+    0% { right: -50px; }
+    100% { right: 100vw; }
+}
+.score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #000000; /* Changed to Black for better visibility on white background */
+    text-shadow: 2px 2px 4px #cccccc; /* Subtle shadow for readability */
+}
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #000000; /* Changed to Black for better visibility */
+    text-shadow: 2px 2px 4px #cccccc;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+}
